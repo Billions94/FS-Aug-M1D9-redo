@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+    color: white;
+    max-width: 798px;
+    margin: 0 auto;
+}
+
+div {
+    background-color: #211f1f;
+    display: inline-block;
+    font-size: x-large;
+    border-style: dotted;
+    border-color: black;
+    margin: 10px;
+    width: auto;
+    max-width: 100%;
+}
+
+h1 {
+    cursor: pointer;
+    text-align: center;
+}
+
+.number {
+    background-image: url(./ai.jpeg);
+}
+
+button {
+    cursor: pointer;
+}
+
+h4 {
+    text-align: center;
+}
+
+.highlight {
+    color: red;
+}
