@@ -13,16 +13,16 @@ function displayBingo(){
 }
 
 function fillArray(){
-    let array = [];
+    const array = [];
     for (let i = 0; i < array.length; i++) {
         array.push(i+1)
     }
     return array
 }
 
-function getRandomArray(range){
-    let random = Math.floor(Math.random() * range.length)
-    let randomNode = range.splice(random, 1)[0]
+function getRandomNum(range){
+    const random = Math.floor(Math.random() * range.length)
+    const randomNode = range.splice(random, 1)[0]
     return randomNode
 }
      
@@ -40,9 +40,21 @@ function changeH1(){
 }
 
 
+function createUserBoard(){
+    const userNum = document.getElementById('value').value
+    if (parseInt(userNum) > 0) {
+        for (let i = 0; i < parseInt(userNum); i++) {
+            const userBoard = document.createElement('div')
+            userBoard.className = 'userBoard'
+            for (let i = 1; i < 25; i++) {}
+            
+        }
+    }
+}
 
 
 window.onload = function(){
     displayBingo()
+    const range = fillArray()
     
-}
+} 

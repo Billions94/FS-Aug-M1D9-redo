@@ -23,12 +23,11 @@ h1 {
     text-align: center;
 }
 
-.number {
-    background-image: url(./ai.jpeg);
-}
 
-button {
+
+input {
     cursor: pointer;
+    align-items: center;
 }
 
 h4 {
