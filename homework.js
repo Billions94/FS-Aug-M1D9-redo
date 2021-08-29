@@ -14,8 +14,8 @@ function displayBingo(){
 
 function fillArray(){
     const array = [];
-    for (let i = 0; i < array.length; i++) {
-        array.push(i+1)
+    for (let i = 0; i < 76; i++) {
+        array.push(i + 1)
     }
     return array
 }
@@ -26,12 +26,12 @@ function getRandomNum(range){
     return randomNode
 }
      
-function generateRandomNumber(){
-    const randNum = Math.floor(Math.random() *76)
+function generateRandomNumber(range){
+    const randNum = getRandomNum(range)
     const randNumNode = document.querySelector('h4')
     randNumNode.innerText = 'Number: ' + randNum
     let cells = document.querySelectorAll('.container .cells')
-    cells[randNum -1].style.backgroundColor = 'blue'
+    cells[randNum -1].classList.add('highlight')
 }
 
 function changeH1(){
@@ -42,19 +42,30 @@ function changeH1(){
 
 function createUserBoard(){
     const userNum = document.getElementById('value').value
+    const  userBoardContainer = document.getElementById('userboard')
     if (parseInt(userNum) > 0) {
         for (let i = 0; i < parseInt(userNum); i++) {
             const userBoard = document.createElement('div')
             userBoard.className = 'userBoard'
-            for (let i = 1; i < 25; i++) {}
+            for (let i = 1; i < 25; i++) {
+                userBoard.innerText = Math.round(Math.random() *76)
+                
+            }
+            userBoardContainer.appendChild(userBoard)
             
         }
     }
 }
 
 
+    
 window.onload = function(){
     displayBingo()
     const range = fillArray()
+    const randomBtn = document.getElementById('btn');
+    randomBtn.addEventListener('click', function(){
+        generateRandomNumber(range)
+    })
+    
     
 } 

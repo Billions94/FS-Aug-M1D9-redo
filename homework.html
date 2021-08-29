@@ -4,21 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Bingo</title>
     <link rel="stylesheet" href="homework.css" />
   </head>
   <body>
     <h1 onclick="changeH1()">Bingo</h1>
 
+    <div id="userboard"></div>
     <!--Bungo container-->
     <div id="bingo-container" class="container">
       <h4 id="random"></h4>
      </div>
 
+    
+
       
-     <input type="button" onclick="" value="Generate User Board"></input>
+     <input type="button" onclick="createUserBoard()" value="Generate User Board"></input>
      <input type="number" id="value" value="1">
-    <input type="button" onclick="generateRandomNumber()" value="Generate random number" ></input>
+    <input type="button" id="btn" value="Generate random number" ></input>
 
     <script type="text/javascript" src="homework.js"></script>
   </body>

@@ -1,6 +1,6 @@
 body {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     max-width: 798px;
     margin: 0 auto;
 }
@@ -35,6 +35,23 @@ h4 {
 }
 
 .highlight {
-    color: red;
+    /* color: red; */
+    border-color: red;
 }
 
+/* .numberSpot {
+    background-color: darkgrey;
+    display: inline-block;
+    width: 10%;
+    min-height: 64px;
+    text-align: center;
+    font-size: x-large;
+    color: white;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #2a2a2a;
+    border-radius: 8px;
+    margin: 3px;
+    padding-top: 32px;
+    cursor: pointer;
+} */
