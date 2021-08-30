@@ -45,10 +45,12 @@ function createUserBoard(){
     const  userBoardContainer = document.getElementById('userboard')
     if (parseInt(userNum) > 0) {
         for (let i = 0; i < parseInt(userNum); i++) {
+            const range = fillArray()
             const userBoard = document.createElement('div')
             userBoard.className = 'userBoard'
             for (let i = 1; i < 25; i++) {
-                userBoard.innerText = Math.round(Math.random() *76)
+                const random = generateRandomNumber(range)
+                userBoard.innerHTML += `<div class='div'>${random}</div>`
                 
             }
             userBoardContainer.appendChild(userBoard)
@@ -61,10 +63,14 @@ function createUserBoard(){
     
 window.onload = function(){
     displayBingo()
-    const range = fillArray()
-    const randomBtn = document.getElementById('btn');
+    const range = fillArray();
+    const randomBtn = document.getElementById('randbtn')
     randomBtn.addEventListener('click', function(){
         generateRandomNumber(range)
+    });
+    const userBtn = document.getElementById('userbtn')
+    userBtn.addEventListener('click', function(){
+        createUserBoard()
     })
     
     
